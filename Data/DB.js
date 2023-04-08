@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export const connectToDB = () => {
     mongoose.connect(process.env.MONGO_URI, {
-        dbName: "AuthenticationApi"
+        dbName: "shorts"
     })
     .then(()=> console.log("database is connected"))
     .catch((e)=> console.log(e))
