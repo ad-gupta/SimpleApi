@@ -2,9 +2,13 @@ import express from "express";
 import { config } from "dotenv";
 import userRoute from "./Routes/user.js";
 import cookieParser from "cookie-parser"
-import taskRoute from "./Routes/task.js";
 import { errorMiddleware } from "./middlewares/error.js";
 import cors from 'cors'
+import postRoute from './Routes/post.js'
+// import {data} from "./Data/data.js";
+// import { isAuthenticated } from "./middlewares/auth.js";
+// import {Videos} from './Models/videoData.js'
+// import { postVideo } from "./controllers/videoController.js";
 
 
 export const app = express()
@@ -20,7 +24,7 @@ app.use(cors({
 
 
 app.use('/users',userRoute)
-app.use('/tasks', taskRoute)
+app.use('/post', postRoute)
 
 config({
     path: './Data/config.env'
@@ -29,6 +33,7 @@ config({
 app.get('/', (req, resp, next) => {
     resp.send("running")
 })
+
 
 app.use(errorMiddleware)
 

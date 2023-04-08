@@ -1,14 +1,29 @@
-import mongoose from "mongoose";
+import mongoose  from "mongoose";
 
-
-const taskSchema = mongoose.Schema({
+const Schema = mongoose.Schema({
     title: {
+        type: String, 
+        required: true
+    },
+    url:{
         type: String,
         required: true
     },
-    description: {
+    song: {
         type: String,
         required: true
+    },
+    like: {
+        type: Number,
+        default: 0
+    },
+    description:{
+        type: String,
+        required: true
+    },
+    shares:{
+        type: Number,
+        default: 0
     },
     isCompleted: {
         type: Boolean,
@@ -26,4 +41,4 @@ const taskSchema = mongoose.Schema({
     }
 })
 
-export const Task = mongoose.model('Task', taskSchema)
+export const Videos = mongoose.model('video', Schema)

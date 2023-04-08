@@ -1,7 +1,7 @@
 {
-  "name": "server",
+  "name": "shorts",
   "version": "1.0.0",
-  "description": "Authentication app",
+  "description": "Shorts app",
   "main": "server.js",
   "type": "module",
   "engines": {
@@ -12,7 +12,7 @@
     "dev": "nodemon server.js",
     "build": "echo success"
   },
-  "author": "",
+  "author": "Awadhesh Gupta",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
